@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "commonJs",
+    "esModuleInterop": true,
+    "types": ["node", "webdriverio/sync", "@wdio/mocha-framework", "@wdio/selenium-standalone-service"]
+  },
+  "include": ["./test/**/*.ts"]
+}
