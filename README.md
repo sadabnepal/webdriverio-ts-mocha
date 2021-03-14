@@ -19,7 +19,7 @@ npm install
 
 Run e2e tests:
 ```bash
-npm run tests:e2e
+npm run tests
 ```
 
 ### Generate/Open allure reporter
