@@ -33,3 +33,4 @@ npm run tests
 	- Page Object Design pattern
 	
 ### Sample Report
+![sample_allure_report](https://user-images.githubusercontent.com/65847528/111063152-129a4c80-84d3-11eb-953e-a8e93a570ae5.png)
