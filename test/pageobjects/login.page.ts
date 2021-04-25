@@ -5,7 +5,7 @@ class LoginPage extends Page {
  
     get inputUsername () { return $('#username') }
     get inputPassword () { return $('#password') }
-    get btnSubmit () { return $('button[type="submit"]') }
+    get btnSubmit () { return $("button[type='submit']") }
 
     open () {
         return super.open('https://the-internet.herokuapp.com/login');
