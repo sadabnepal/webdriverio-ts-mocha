@@ -3,7 +3,7 @@
     "target": "ES2019",
     "module": "commonJs",
     "esModuleInterop": true,
-    "types": ["node", "webdriverio/sync", "@wdio/mocha-framework", "@wdio/selenium-standalone-service"]
+    "types": ["node", "webdriverio/sync", "@wdio/mocha-framework", "@wdio/selenium-standalone-service", "expect-webdriverio"]
   },
   "include": ["./test/**/*.ts"]
 }
