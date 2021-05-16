@@ -1,5 +1,5 @@
 # WebdriverIO Mocha Framework
-This is a sample project that uses WebdriverIO and TypeScript. It includes examples of the PageObject pattern and some practical examples for using WebdriverIO for cross browser and parallel testing.
+This is a sample project that uses WebdriverIO and JavaScript. It includes examples of the PageObject pattern and some practical examples for using WebdriverIO for cross browser and parallel testing.
 
 ## Requirements
 -   node >= 12.18.x - [how to install Node](https://nodejs.org/en/download/)
