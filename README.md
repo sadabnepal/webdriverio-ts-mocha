@@ -1,11 +1,11 @@
 # WebdriverIO TypeScript Mocha Framework
 This is a sample project that uses WebdriverIO and TypeScript. It includes examples of the PageObject pattern and some practical examples for using WebdriverIO for cross browser and parallel testing.
 
-## Requirements
+### Requirements
 -   node >= 12.18.x - [how to install Node](https://nodejs.org/en/download/)
 -   npm >= 6.14.x - [how to install NPM](https://www.npmjs.com/get-npm)
 
-## Getting Started
+### Getting Started
 Clone Repository
 ```bash
 1. git clone https://github.com/sadabnepal/WebdriverIOMochaFramework.git
@@ -27,7 +27,7 @@ Generate allure report:
 npm run report
 ```
 
-## Folder Structure
+### Folder Structure
 ```
 ├───test
 │   ├───enums
@@ -46,7 +46,7 @@ npm run report
 └───wdio.conf.js
 ```
 
-## Key Features
+### Key Features
 	- Allure Report
 	- Mocha framework
 	- Parallel execution
