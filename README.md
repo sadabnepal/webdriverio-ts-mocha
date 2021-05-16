@@ -1,5 +1,5 @@
-# WebdriverIO Mocha Framework
-This is a sample project that uses WebdriverIO and JavaScript. It includes examples of the PageObject pattern and some practical examples for using WebdriverIO for cross browser and parallel testing.
+# WebdriverIO TypeScript Mocha Framework
+This is a sample project that uses WebdriverIO and TypeScript. It includes examples of the PageObject pattern and some practical examples for using WebdriverIO for cross browser and parallel testing.
 
 ## Requirements
 -   node >= 12.18.x - [how to install Node](https://nodejs.org/en/download/)
@@ -19,13 +19,34 @@ npm install
 
 Run e2e tests:
 ```bash
-npm run tests
+npm test
 ```
 
-### Generate/Open allure reporter
-- In the terminal, perform `npm run report` to open allure report port. Report will be opened in default browser
+Generate allure report:
+```bash
+npm run report
+```
 
-### Key Features
+## Folder Structure
+```
+├───test
+│   ├───enums
+|   │   	└───WaitEnums.ts
+|   ├───Utils
+|   │   	└───WaitUtils.ts
+|   ├───pagesobjects
+|   │  	   	├───secure.page.ts
+|   │		├───login.page.ts
+|   │		└───page.ts
+|   └───specs
+|		    └───login.e2e.ts
+├───package.json
+├───README.md
+├───tsconfig.json
+└───wdio.conf.js
+```
+
+## Key Features
 	- Allure Report
 	- Mocha framework
 	- Parallel execution
