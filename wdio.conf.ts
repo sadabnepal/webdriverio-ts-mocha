@@ -1,51 +1,37 @@
-exports.config = {
+export const config:WebdriverIO.Config = {
     // ====================
     // Runner Configuration
     // ====================
     runner: 'local',
     headless: false,
-    //
     // ==================
     // Specify Test Files
     // ==================
     specs: [
         './test/specs/**/*.ts'
     ],
-    exclude: [
-        // 'path/to/excluded/files'
-    ],
+    exclude: [],
     // ============
     // Capabilities
     // ============
     maxInstances: 4,
-    capabilities: [{
-        maxInstances: 2,
-        browserName: 'chrome',
-        acceptInsecureCerts: true
-        // If outputDir is provided WebdriverIO can capture driver session logs
-        // it is possible to configure which logTypes to include/exclude.
-        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
-    }],
-    //
+    capabilities: [
+        {
+            maxInstances: 1,
+            browserName: 'chrome',
+            acceptInsecureCerts: true
+        },
+        {
+            maxInstances: 1,
+            browserName: 'MicrosoftEdge',
+            acceptInsecureCerts: true
+        }
+    ],
     // ===================
     // Test Configurations
     // ===================
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'error',
-    // Set specific log levels per logger
-    // loggers:
-    // - webdriver, webdriverio
-    // - @wdio/applitools-service, @wdio/browserstack-service, @wdio/devtools-service, @wdio/sauce-service
-    // - @wdio/mocha-framework, @wdio/jasmine-framework
-    // - @wdio/local-runner
-    // - @wdio/sumologic-reporter
-    // - @wdio/cli, @wdio/config, @wdio/sync, @wdio/utils
-    // Level of logging verbosity: trace | debug | info | warn | error | silent
-    // logLevels: {
-    //     webdriver: 'info',
-    //     '@wdio/applitools-service': 'info'
-    // },
     bail: 0,
     baseUrl: 'https://letcode.in/test',
     waitforTimeout: 10000,
@@ -54,9 +40,8 @@ exports.config = {
     services: ['selenium-standalone'],
     framework: 'mocha',
     specFileRetries: 0,
-    // specFileRetriesDelay: 0,
-    // Whether or not retried specfiles should be retried immediately or deferred to the end of the queue
-    // specFileRetriesDeferred: false,
+    specFileRetriesDelay: 0,
+    specFileRetriesDeferred: false,
     reporters: ['spec', 
         ['allure', 
             {
