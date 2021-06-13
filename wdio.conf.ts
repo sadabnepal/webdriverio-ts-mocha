@@ -8,15 +8,20 @@ export const config:WebdriverIO.Config = {
     // Specify Test Files
     // ==================
     specs: [
-        './test/specs/**/*.ts'
+        './test/**/*.ts'
     ],
     exclude: [],
+
+    suites: {
+        uiTests: ['./test/specs/**/*.ts'],
+        apiTests: ['./test/api/**/*.ts']
+    },
     // ============
     // Capabilities
     // ============
     maxInstances: 4,
     capabilities: [
-        {
+        {  
             maxInstances: 1,
             browserName: 'chrome',
             acceptInsecureCerts: true

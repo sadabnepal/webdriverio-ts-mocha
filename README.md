@@ -17,9 +17,11 @@ Install the dependencies:
 npm install
 ```
 
-Run e2e tests:
+Run tests:
 ```bash
-npm test
+npm test (all UI and API test)
+npm run uitest (only UI tests)
+npm run apitest (only API tests)
 ```
 
 Generate allure report:
@@ -29,7 +31,11 @@ npm run report
 
 ### Folder Structure
 ```
+├───Config
+|      └───APIConfig.ts
 ├───test
+│   ├───api
+|   │    └───reqres_users.ts
 │   ├───enums
 |   │   	└───WaitEnums.ts
 |   ├───Utils
@@ -52,6 +58,7 @@ npm run report
 	- Parallel execution
 	- Cross browser testing
 	- Page Object Design pattern
+	- API Testing using supertest
 	
 ### Sample Report
 ![sample_allure_report](https://user-images.githubusercontent.com/65847528/111063152-129a4c80-84d3-11eb-953e-a8e93a570ae5.png)
