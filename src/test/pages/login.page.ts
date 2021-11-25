@@ -1,4 +1,4 @@
-import { clickElement, setData } from 'test/utils/commands';
+import { clickElement, setData } from '../utils/commands';
 import Page from './page';
 
 class LoginPage extends Page {

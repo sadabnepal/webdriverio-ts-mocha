@@ -6,8 +6,8 @@
   "scripts": {
     "test": "npx wdio wdio.conf.ts",
     "uitest": "npx wdio wdio.conf.ts --suite uiTests",
-    "api": "mocha --timeout 20000 --reporter mochawesome --reporter-options reportDir=reports/apiresult -r tsconfig-paths/register -r ts-node/register src/api/tests/*.ts",
-    "report": "allure generate --clean ./reports/allure-results && allure open"
+    "api": "mocha --timeout 20000 --reporter mochawesome --reporter-options reportDir=reports/api -r tsconfig-paths/register -r ts-node/register src/api/test/*.ts",
+    "report": "marge ./reports/json/wdio-ma-merged.json && move mochawesome-report.html ./mochawesome-report"
   },
   "author": "MD SADAB SAQIB",
   "license": "ISC",
@@ -26,10 +26,12 @@
     "chai": "^4.3.4",
     "faker": "^5.5.3",
     "mochawesome": "^7.0.1",
+    "mochawesome-report-generator": "^3.1.5",
     "supertest": "^6.1.6",
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.12.0",
     "typescript": "^4.5.2",
+    "wdio-mochawesome-reporter": "^4.0.0",
     "webdriverio": "^7.16.9"
   }
 }
