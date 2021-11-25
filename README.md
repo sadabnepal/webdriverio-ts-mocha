@@ -49,13 +49,13 @@ npm run report
 |   |            └───reqres_users.ts
 │   └───test
 |	    ├───pages
-|	    │  	   	├───secure.page.ts
-|	    │		├───login.page.ts
-|	    │		└───page.ts
+|	    │  	 ├───secure.page.ts
+|	    │	 ├───login.page.ts
+|	    │	 └───page.ts
 |	    ├───specs
-|	    │   	└───login.e2e.ts
+|	    │    └───login.e2e.ts
 |	    └───utils
-|	 		    └───commands.ts
+|	         └───commands.ts
 ├───package.json
 ├───README.md
 ├───tsconfig.json
