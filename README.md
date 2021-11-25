@@ -22,17 +22,26 @@ npm test (all UI test)
 npm run api (all API tests)
 ```
 
-Generate allure report:
+Generate mochawesome report (UI):
 ```bash
 npm run report
 ```
+
+Report Paths:
+```
+API: reports/api/mochawesome.html
+UI: mochawesome-report/mochawesome-report.html
+```
+
 ### Key Features
-	- Allure and mochawesome Report
+	- WebdriverIO (v7)
+	- TypeScript
 	- Mocha framework
+	- Page Object Design pattern
+	- Mochawesome Report
 	- Parallel execution
 	- Cross browser testing
-	- Page Object Design pattern
-	- API Testing using supertest
+	- API tests (supertest)
 
 ### Folder Structure
 ```
@@ -45,7 +54,7 @@ npm run report
 |   |     |      └───payloads.ts
 |   |     ├───services
 |   |     |      └───endpoints.ts
-|   |     └───tests
+|   |     └───test
 |   |            └───reqres_users.ts
 │   └───test
 |	    ├───pages
@@ -54,8 +63,11 @@ npm run report
 |	    │	 └───page.ts
 |	    ├───specs
 |	    │    └───login.e2e.ts
+|	    ├───static
+|	    │    └───loginConstants.ts
 |	    └───utils
-|	         └───commands.ts
+|            ├───commands.ts
+|            └───fileutils.ts
 ├───package.json
 ├───README.md
 ├───tsconfig.json
@@ -63,4 +75,8 @@ npm run report
 ```
 	
 ### Sample Report
-![sample_allure_report](https://user-images.githubusercontent.com/65847528/111063152-129a4c80-84d3-11eb-953e-a8e93a570ae5.png)
+API:
+![image](https://user-images.githubusercontent.com/65847528/143480364-2315b191-e8cd-460b-967c-e430abb29416.png)
+
+UI:
+![image](https://user-images.githubusercontent.com/65847528/143480443-cee233a4-6296-4773-8b54-c593d7dfd022.png)
