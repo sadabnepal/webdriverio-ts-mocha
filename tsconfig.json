@@ -2,15 +2,8 @@
   "compilerOptions": {
     "target": "ES2019",
     "module": "commonJs",
+    "baseUrl": "./src",
     "esModuleInterop": true,
-    "paths": {
-      "*": [
-          "./*"
-      ],
-      "test/*": [
-          "./test/*"
-      ]
-  },
-  "types": ["node", "webdriverio/sync", "@wdio/mocha-framework", "@wdio/selenium-standalone-service", "expect-webdriverio"]
+    "types": ["node", "webdriverio/sync", "@wdio/mocha-framework", "@wdio/selenium-standalone-service", "expect-webdriverio"]
   }
 }

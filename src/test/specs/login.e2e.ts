@@ -1,5 +1,5 @@
-import LoginPage from  '../pageobjects/login.page';
-import SecurePage from '../pageobjects/secure.page';
+import LoginPage from  '../pages/login.page';
+import SecurePage from '../pages/secure.page';
 import allureReporter from '@wdio/allure-reporter'
 
 describe('My Login application', () => {

@@ -6,26 +6,30 @@
   "scripts": {
     "test": "npx wdio wdio.conf.ts",
     "uitest": "npx wdio wdio.conf.ts --suite uiTests",
-    "apitest": "npx wdio wdio.conf.ts  --suite apiTests",
-    "report": "allure generate --clean allure-results && allure open"
+    "api": "mocha --timeout 20000 --reporter mochawesome --reporter-options reportDir=reports/apiresult -r tsconfig-paths/register -r ts-node/register src/api/tests/*.ts",
+    "report": "allure generate --clean ./reports/allure-results && allure open"
   },
   "author": "MD SADAB SAQIB",
   "license": "ISC",
   "devDependencies": {
-    "@types/faker": "^5.5.6",
+    "@types/chai": "^4.2.22",
+    "@types/faker": "^5.5.9",
     "@types/supertest": "^2.0.11",
-    "@wdio/allure-reporter": "^7.1.1",
-    "@wdio/cli": "^7.6.0",
-    "@wdio/local-runner": "^7.1.2",
-    "@wdio/mocha-framework": "^7.1.2",
-    "@wdio/selenium-standalone-service": "^7.1.1",
-    "@wdio/spec-reporter": "^7.1.1",
-    "@wdio/sync": "^7.1.1",
+    "@wdio/allure-reporter": "^7.16.8",
+    "@wdio/cli": "^7.16.9",
+    "@wdio/local-runner": "^7.16.9",
+    "@wdio/mocha-framework": "^7.16.6",
+    "@wdio/selenium-standalone-service": "^7.16.6",
+    "@wdio/spec-reporter": "^7.16.9",
+    "@wdio/sync": "^7.16.9",
     "allure-commandline": "^2.13.8",
+    "chai": "^4.3.4",
     "faker": "^5.5.3",
-    "supertest": "^6.1.3",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.3",
-    "webdriverio": "^7.1.1"
+    "mochawesome": "^7.0.1",
+    "supertest": "^6.1.6",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.2",
+    "webdriverio": "^7.16.9"
   }
 }
