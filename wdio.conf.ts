@@ -1,4 +1,4 @@
-export const config:WebdriverIO.Config = {
+export const config: WebdriverIO.Config = {
     // ====================
     // Runner Configuration
     // ====================
@@ -8,20 +8,19 @@ export const config:WebdriverIO.Config = {
     // Specify Test Files
     // ==================
     specs: [
-        './test/**/*.ts'
+        './src/test/specs/*.ts'
     ],
     exclude: [],
 
     suites: {
-        uiTests: ['./test/specs/**/*.ts'],
-        apiTests: ['./test/api/**/*.ts']
+        uiTests: ['./src/test/specs/**/*.ts'],
     },
     // ============
     // Capabilities
     // ============
     maxInstances: 4,
     capabilities: [
-        {  
+        {
             maxInstances: 1,
             browserName: 'chrome',
             acceptInsecureCerts: true
@@ -38,7 +37,7 @@ export const config:WebdriverIO.Config = {
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'error',
     bail: 0,
-    baseUrl: 'https://letcode.in/test',
+    baseUrl: 'https://localhost',
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
@@ -47,12 +46,12 @@ export const config:WebdriverIO.Config = {
     specFileRetries: 0,
     specFileRetriesDelay: 0,
     specFileRetriesDeferred: false,
-    reporters: ['spec', 
-        ['allure', 
+    reporters: ['spec',
+        ['allure',
             {
-                outputDir: 'allure-results',
+                outputDir: 'reports/allure-results',
                 disableWebdriverStepsReporting: true,
-                disableWebdriverScreenshotsReporting: true,
+                disableWebdriverScreenshotsReporting: false,
             }
         ]
     ],
@@ -137,7 +136,7 @@ export const config:WebdriverIO.Config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    afterTest: function(test, context, { error, result, duration, passed, retries }) {
+    afterTest: function (test, context, { error, result, duration, passed, retries }) {
         if (!passed) {
             browser.takeScreenshot();
         }

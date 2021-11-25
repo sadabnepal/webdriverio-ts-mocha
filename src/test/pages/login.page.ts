@@ -1,5 +1,5 @@
+import { clickElement, setData } from 'test/utils/commands';
 import Page from './page';
-import { WaitEnum } from '../enums/WaitEnums';
 
 class LoginPage extends Page {
  
@@ -12,9 +12,9 @@ class LoginPage extends Page {
     }
 
     login (username: string, password: string) {
-        this.setData(this.inputUsername, username, WaitEnum.NONE);
-        this.setData(this.inputPassword, password, WaitEnum.NONE);
-        this.click(this.btnSubmit, WaitEnum.NONE); 
+        setData(this.inputUsername, username);
+        setData(this.inputPassword, password);
+        clickElement(this.btnSubmit); 
     }
 
 }
