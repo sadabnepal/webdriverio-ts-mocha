@@ -42,6 +42,7 @@ UI: mochawesome-report/mochawesome-report.html
 	- Parallel execution
 	- Cross browser testing
 	- API tests (supertest)
+	- Screenshot in report for failed tests
 
 ### Folder Structure
 ```
