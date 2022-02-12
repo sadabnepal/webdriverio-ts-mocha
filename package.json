@@ -4,11 +4,12 @@
   "description": "WebdriverIO v7 UI Automation Framework",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio wdio.conf.ts",
+    "test": "npx wdio src/web/config/wdio.conf.ts",
+    "multi-browser": "npx wdio src/web/config/wdio.conf.cross-browser.ts",
     "smoke": "npx wdio wdio.conf.ts --suite smoke",
     "api": "mocha --timeout 20000 --reporter mochawesome --reporter-options reportDir=reports/api -r tsconfig-paths/register -r ts-node/register src/api/test/*.ts",
-    "report": "marge ./reports/json/wdio-ma-merged.json && move mochawesome-report.html ./mochawesome-report",
-    "cleanup": "rmdir /Q /S allure-reports"
+    "report": "marge ./reports/json/wdio-ma-merged.json --reportTitle UIAutomationReport --reportDir=reports/mocha && move .\\reports\\mocha.html .\\reports\\mocha",
+    "cleanup": "rmdir /Q /S reports"
   },
   "author": "MD SADAB SAQIB",
   "license": "ISC",

@@ -1,4 +1,4 @@
-import { deleteDirectory } from "./src/web/utils/fileutils";
+import { chromeCapabilities } from "./capabilities";
 
 export const config: WebdriverIO.Config = {
     // ==================
@@ -16,18 +16,7 @@ export const config: WebdriverIO.Config = {
     // Capabilities
     // ============
     maxInstances: 4,
-    capabilities: [
-        {
-            maxInstances: 1,
-            browserName: 'chrome',
-            acceptInsecureCerts: true
-        },
-        {
-            maxInstances: 1,
-            browserName: 'MicrosoftEdge',
-            acceptInsecureCerts: true
-        }
-    ],
+    capabilities: chromeCapabilities,
     // ===================
     // Test Configurations
     // ===================
@@ -73,10 +62,8 @@ export const config: WebdriverIO.Config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    onPrepare: function (config, capabilities) {
-        deleteDirectory('mochawesome-report');
-        deleteDirectory('reports');
-    },
+    // onPrepare: function (config, capabilities) {
+    // },
     /**
      * Gets executed before a worker process is spawned and can be used to initialise specific service
      * for that worker as well as modify runtime environments in an async fashion.
@@ -139,9 +126,9 @@ export const config: WebdriverIO.Config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    afterTest: function (test, context, { error, result, duration, passed, retries }) {
+    afterTest: async function (test, context, { error, result, duration, passed, retries }) {
         if (!passed) {
-            browser.takeScreenshot();
+            await browser.takeScreenshot();
         }
     },
 

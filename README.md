@@ -19,61 +19,51 @@ npm install
 
 Run tests:
 ```bash
-npm test    [ UI test ]
-npm run api [ API tests ]
+npm test                [ UI test in chrome ]
+npm run multi-browser   [ UI test in chrome and edge ]
+npm run api             [ API tests ]
 ```
 
-Generate mochawesome report (UI):
+Generate report (UI):
 ```bash
 npm run report
 ```
 
 Report Paths:
 ```
+UI:  reports/mocha/mocha.html
 API: reports/api/mochawesome.html
-UI: mochawesome-report/mochawesome-report.html
+```
+
+Cleanup Report folder
+```
+npm run cleanup
 ```
 
 ### Key Features
-	- WebdriverIO (v7)
-	- TypeScript
-	- Mocha framework
+	- Web App and API testing
 	- Page Object Design pattern
-	- Mochawesome Report
-	- Parallel execution
-	- Cross browser testing
-	- API tests (supertest)
-	- Screenshot in report for failed tests
+	- Custome types for web elements
+	- Parallel execution and Cross browser testing
+	- Report integration with screenshot on failure
 
 ### Folder Structure
 ```
-
-├───config
-|      └───APIConfig.ts
 ├───src
 |   ├───api
 |   |     ├───resources
-|   |     |      └───payloads.ts
 |   |     ├───services
-|   |     |      └───endpoints.ts
 |   |     └───test
-|   |            └───reqres_users.ts
 │   └───web
+|	    ├───config
 |	    ├───pages
-|	    │  	 ├───secure.page.ts
-|	    │	 ├───login.page.ts
-|	    │	 └───page.ts
 |	    ├───specs
-|	    │    └───login.e2e.ts
 |	    ├───static
-|	    │    └───loginConstants.ts
-|	    └───utils
-|            ├───commands.ts
-|            └───fileutils.ts
+|	    └───types
+├───package-lock.json
 ├───package.json
 ├───README.md
-├───tsconfig.json
-└───wdio.conf.js
+└───tsconfig.json
 ```
 	
 ### Sample Report
