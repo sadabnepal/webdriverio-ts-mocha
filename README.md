@@ -2,7 +2,8 @@
 This is a sample project that uses WebdriverIO and TypeScript. It includes examples of the PageObject pattern and some practical examples for using WebdriverIO for cross browser and parallel testing.
 
 ### Requirements
--   node >= 12.18.x - [how to install Node](https://nodejs.org/en/download/)
+[![NodeJs](https://img.shields.io/badge/-NodeJS%20v12%20OR%20later-%23339933?logo=npm)](https://nodejs.org/en/download/)
+[![VSCode](https://img.shields.io/badge/-Visual%20Studio%20Code-%233178C6?logo=visual-studio-code)](https://code.visualstudio.com/download)
 
 ### Getting Started
 Clone Repository
