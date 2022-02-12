@@ -1,17 +1,17 @@
-import { webelement } from "web/types/webelements";
+import { WebElement } from "web/types/webelements";
 
 export default class Page {
 
-    protected open(path: string) {
-        browser.maximizeWindow();
+    protected async open(path: string) {
+        await browser.maximizeWindow();
         return browser.url(path);
     }
 
-    protected clickElement(element: webelement) {
-        $(element).click();
+    protected async clickElement(element: WebElement) {
+        await element.click();
     }
 
-    protected setData(element: webelement, value: string) {
-        $(element).setValue(value);
+    protected async setData(element: WebElement, value: string) {
+        await element.setValue(value);
     }
 }

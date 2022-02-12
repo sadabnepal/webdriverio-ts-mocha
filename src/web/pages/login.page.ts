@@ -6,15 +6,14 @@ class LoginPage extends Page {
     get inputPassword() { return $('#password') }
     get btnSubmit() { return $("button[type='submit']") }
 
-    openLoginPage() {
-        super.open('https://the-internet.herokuapp.com/login');
-        return this;
+    async openLoginPage() {
+        await super.open('https://the-internet.herokuapp.com/login');
     }
 
-    performLogin(username: string, password: string) {
-        this.setData(this.inputUsername, username);
-        this.setData(this.inputPassword, password);
-        this.clickElement(this.btnSubmit);
+    async performLogin(username: string, password: string) {
+        await this.setData(this.inputUsername, username);
+        await this.setData(this.inputPassword, password);
+        await this.clickElement(this.btnSubmit);
     }
 
 }

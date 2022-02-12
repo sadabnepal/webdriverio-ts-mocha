@@ -4,6 +4,6 @@
     "module": "commonJs",
     "baseUrl": "./src",
     "esModuleInterop": true,
-    "types": ["node", "webdriverio/sync", "@wdio/mocha-framework", "@wdio/selenium-standalone-service", "expect-webdriverio"]
+    "types": ["node", "webdriverio/async", "@wdio/mocha-framework", "@wdio/selenium-standalone-service", "expect-webdriverio"]
   }
 }
