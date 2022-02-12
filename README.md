@@ -51,15 +51,15 @@ npm run cleanup
 ```
 ├───src
 |   ├───api
-|   |     ├───resources
-|   |     ├───services
-|   |     └───test
+|   |    ├───resources
+|   |    ├───services
+|   |    └───test
 │   └───web
-|	    ├───config
-|	    ├───pages
-|	    ├───specs
-|	    ├───static
-|	    └───types
+|        ├───config
+|        ├───pages
+|        ├───specs
+|        ├───static
+|        └───types
 ├───package-lock.json
 ├───package.json
 ├───README.md
