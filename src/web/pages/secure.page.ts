@@ -1,5 +1,5 @@
 class securepage {
-    
+
     get flashAlert() { return $('#flash') }
 
 }

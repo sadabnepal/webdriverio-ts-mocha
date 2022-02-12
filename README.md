@@ -18,8 +18,8 @@ npm install
 
 Run tests:
 ```bash
-npm test (all UI test)
-npm run api (all API tests)
+npm test    [ UI test ]
+npm run api [ API tests ]
 ```
 
 Generate mochawesome report (UI):
@@ -57,7 +57,7 @@ UI: mochawesome-report/mochawesome-report.html
 |   |     |      └───endpoints.ts
 |   |     └───test
 |   |            └───reqres_users.ts
-│   └───test
+│   └───web
 |	    ├───pages
 |	    │  	 ├───secure.page.ts
 |	    │	 ├───login.page.ts

@@ -1,21 +1,16 @@
-import { deleteDirectory } from "./src/test/utils/fileutils";
+import { deleteDirectory } from "./src/web/utils/fileutils";
 
 export const config: WebdriverIO.Config = {
-    // ====================
-    // Runner Configuration
-    // ====================
-    runner: 'local',
-    headless: false,
     // ==================
     // Specify Test Files
     // ==================
     specs: [
-        './src/test/specs/*.ts'
+        './src/web/specs/*.ts'
     ],
     exclude: [],
 
     suites: {
-        uiTests: ['./src/test/specs/**/*.ts'],
+        smoke: ['./src/web/specs/**/*.ts'],
     },
     // ============
     // Capabilities
@@ -40,7 +35,7 @@ export const config: WebdriverIO.Config = {
     logLevel: 'error',
     bail: 0,
     baseUrl: 'https://localhost',
-    waitforTimeout: 10000,
+    waitforTimeout: 5000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
     services: ['selenium-standalone'],
