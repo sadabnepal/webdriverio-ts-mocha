@@ -41,6 +41,7 @@ export const config: WebdriverIO.Config = {
         }]
     ],
     mochaOpts: {
+        compilers: ['tsconfig-paths/register'],
         ui: 'bdd',
         timeout: 60000,
         mochawesomeOpts: {

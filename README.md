@@ -51,6 +51,7 @@ npm run cleanup
 ```
 ├───src
 |   ├───api
+|   |    ├───config
 |   |    ├───resources
 |   |    ├───services
 |   |    └───test

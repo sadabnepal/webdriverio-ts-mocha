@@ -2,8 +2,25 @@
   "compilerOptions": {
     "target": "ES2019",
     "module": "commonJs",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "esModuleInterop": true,
-    "types": ["node", "webdriverio/async", "@wdio/mocha-framework", "@wdio/selenium-standalone-service", "expect-webdriverio"]
+    "paths": {
+      "@UIPages/*": [
+        "src/web/pages/*"
+      ],
+      "@UIStatic/*": [
+        "src/web/static/*"
+      ],
+      "@API/*": [
+        "src/api/*"
+      ]
+    },
+    "types": [
+      "node",
+      "webdriverio/async",
+      "@wdio/mocha-framework",
+      "@wdio/selenium-standalone-service",
+      "expect-webdriverio"
+    ]
   }
 }
