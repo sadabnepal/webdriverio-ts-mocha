@@ -30,7 +30,7 @@ npm run report
 
 Report Paths:
 ```
-reports/mocha/mocha.html
+reports/mocha.html
 ```
 
 Cleanup Report folder

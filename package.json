@@ -7,7 +7,7 @@
     "test": "npx wdio src/config/wdio.conf.ts",
     "cross-browser": "npx wdio src/config/wdio.conf.cross-browser.ts",
     "smoke": "npx wdio wdio.conf.ts --suite smoke",
-    "report": "marge ./reports/json/wdio-ma-merged.json --reportTitle UIAutomationReport --reportDir=reports/mocha && move .\\reports\\mocha.html .\\reports\\mocha",
+    "report": "marge ./reports/json/wdio-ma-merged.json --reportTitle UIAutomationReport --reportDir=reports && move ./reports.html ./reports",
     "cleanup": "rmdir /Q /S reports"
   },
   "author": "MD SADAB SAQIB",
