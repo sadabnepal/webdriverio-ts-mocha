@@ -20,7 +20,7 @@ npm install
 Run tests:
 ```bash
 npm test                [ UI test in chrome ]
-npm run multi-browser   [ UI test in chrome and edge ]
+npm run cross-browser   [ UI test in chrome and edge ]
 ```
 
 Generate report:
