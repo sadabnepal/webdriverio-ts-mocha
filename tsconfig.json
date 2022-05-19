@@ -2,17 +2,18 @@
   "compilerOptions": {
     "target": "ES2019",
     "module": "commonJs",
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "esModuleInterop": true,
     "paths": {
-      "@UIPages/*": [
-        "src/web/pages/*"
+      "@Pages/*": [
+        "src/pages/*"
       ],
-      "@UIStatic/*": [
-        "src/web/static/*"
+      "@Static/*": [
+        "src/static/*"
       ],
-      "@API/*": [
-        "src/api/*"
+      "@Resources/*": [
+        "src/resources/*"
       ]
     },
     "types": [

@@ -5,12 +5,12 @@ export const config: WebdriverIO.Config = {
     // Specify Test Files
     // ==================
     specs: [
-        './src/web/specs/*.ts'
+        './src/specs/*.ts'
     ],
     exclude: [],
 
     suites: {
-        smoke: ['./src/web/specs/**/*.ts'],
+        smoke: ['./src/specs/**/*.ts'],
     },
     // ============
     // Capabilities

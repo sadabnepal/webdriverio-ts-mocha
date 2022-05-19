@@ -21,18 +21,16 @@ Run tests:
 ```bash
 npm test                [ UI test in chrome ]
 npm run multi-browser   [ UI test in chrome and edge ]
-npm run api             [ API tests ]
 ```
 
-Generate report (UI):
+Generate report:
 ```bash
 npm run report
 ```
 
 Report Paths:
 ```
-UI:  reports/mocha/mocha.html
-API: reports/api/mochawesome.html
+reports/mocha/mocha.html
 ```
 
 Cleanup Report folder
@@ -41,7 +39,6 @@ npm run cleanup
 ```
 
 ### Key Features
-	- Web App and API testing
 	- Page Object Design pattern
 	- Custome types for web elements
 	- Parallel execution and Cross browser testing
@@ -50,17 +47,11 @@ npm run cleanup
 ### Folder Structure
 ```
 ├───src
-|   ├───api
-|   |    ├───config
-|   |    ├───resources
-|   |    ├───services
-|   |    └───test
-│   └───web
-|        ├───config
-|        ├───pages
-|        ├───specs
-|        ├───static
-|        └───types
+|    ├───config
+|    ├───pages
+|    ├───specs
+|    ├───static
+|    └───types
 ├───package-lock.json
 ├───package.json
 ├───README.md
@@ -68,8 +59,4 @@ npm run cleanup
 ```
 	
 ### Sample Report
-API:
-![image](https://user-images.githubusercontent.com/65847528/143480364-2315b191-e8cd-460b-967c-e430abb29416.png)
-
-UI:
 ![image](https://user-images.githubusercontent.com/65847528/143480443-cee233a4-6296-4773-8b54-c593d7dfd022.png)
