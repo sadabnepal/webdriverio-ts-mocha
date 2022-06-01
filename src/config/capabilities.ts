@@ -1,8 +1,8 @@
 const browserArgs = [
     '--no-sandbox',
     '--disable-infobars',
-    '-sab-headless',
-    '--dile-gpu',
+    '--headless',
+    '--disable-gpu',
     '--window-size=1440,735'
 ]
 

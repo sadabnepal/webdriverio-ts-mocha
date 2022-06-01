@@ -4,9 +4,9 @@
   "description": "WebdriverIO v7 UI Automation Framework",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio src/config/wdio.conf.ts",
-    "cross-browser": "npx wdio src/config/wdio.conf.cross-browser.ts",
-    "smoke": "npx wdio wdio.conf.ts --suite smoke",
+    "test": "wdio src/config/wdio.conf.ts",
+    "cross-browser": "wdio src/config/wdio.conf.cross-browser.ts",
+    "smoke": "wdio wdio.conf.ts --suite smoke",
     "report": "marge ./reports/json/wdio-ma-merged.json --reportTitle UIAutomationReport --reportDir=reports && move ./reports.html ./reports",
     "cleanup": "rmdir /Q /S reports"
   },
