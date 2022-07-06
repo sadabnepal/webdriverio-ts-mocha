@@ -6,7 +6,7 @@
   "scripts": {
     "test": "wdio src/config/wdio.conf.ts",
     "cross-browser": "wdio src/config/wdio.conf.cross-browser.ts",
-    "smoke": "wdio wdio.conf.ts --suite smoke",
+    "smoke": "wdio src/config/wdio.conf.ts --suite smoke",
     "report": "marge ./reports/json/wdio-ma-merged.json --reportTitle UIAutomationReport --reportDir=reports && move ./reports.html ./reports",
     "cleanup": "rmdir /Q /S reports"
   },

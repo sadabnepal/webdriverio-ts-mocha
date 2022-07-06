@@ -10,7 +10,7 @@ export const config: WebdriverIO.Config = {
     exclude: [],
 
     suites: {
-        smoke: ['./src/specs/**/*.ts'],
+        smoke: ['./src/specs/**/login.e2e.ts']
     },
     // ============
     // Capabilities
