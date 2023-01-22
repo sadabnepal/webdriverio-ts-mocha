@@ -4,9 +4,9 @@
   "description": "WebdriverIO v7 UI Automation Framework",
   "main": "index.js",
   "scripts": {
-    "test": "wdio src/config/wdio.conf.ts",
-    "cross-browser": "wdio src/config/wdio.conf.cross-browser.ts",
-    "smoke": "wdio src/config/wdio.conf.ts --suite smoke",
+    "test": "wdio wdio.conf.ts",
+    "cross-browser": "wdio wdio.conf.cross-browser.ts",
+    "smoke": "wdio wdio.conf.ts --suite smoke",
     "report": "marge ./reports/json/wdio-ma-merged.json --reportTitle UIAutomationReport --reportDir=reports && move ./reports.html ./reports",
     "cleanup": "rmdir /Q /S reports"
   },
@@ -17,7 +17,7 @@
     "@wdio/cli": "^7.19.7",
     "@wdio/local-runner": "^7.19.7",
     "@wdio/mocha-framework": "^7.19.7",
-    "@wdio/selenium-standalone-service": "^7.19.5",
+    "@wdio/selenium-standalone-service": "^7.30.0",
     "@wdio/spec-reporter": "^7.19.7",
     "allure-commandline": "^2.17.2",
     "mochawesome-report-generator": "^3.1.5",

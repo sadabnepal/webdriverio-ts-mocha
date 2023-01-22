@@ -1,4 +1,4 @@
-import { chromeCapabilities } from "./capabilities";
+import { chromeCapabilities } from "./src/config/capabilities";
 
 export const config: WebdriverIO.Config = {
     // ==================
