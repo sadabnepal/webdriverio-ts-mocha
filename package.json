@@ -7,7 +7,7 @@
     "test": "wdio wdio.conf.ts",
     "cross-browser": "wdio wdio.conf.cross-browser.ts",
     "smoke": "wdio wdio.conf.ts --suite smoke",
-    "report": "marge ./reports/json/wdio-ma-merged.json --reportTitle UIAutomationReport --reportDir=reports && move ./reports.html ./reports",
+    "report": "marge ./reports/json/wdio-ma-merged.json --reportTitle UIAutomationReport --reportDir=reports --reportFilename=result.html",
     "cleanup": "rmdir /Q /S reports"
   },
   "author": "MD SADAB SAQIB",
