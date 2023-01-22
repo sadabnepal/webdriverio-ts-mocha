@@ -5,17 +5,6 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "esModuleInterop": true,
-    "paths": {
-      "@Pages/*": [
-        "src/pages/*"
-      ],
-      "@Static/*": [
-        "src/static/*"
-      ],
-      "@Resources/*": [
-        "src/resources/*"
-      ]
-    },
     "types": [
       "node",
       "webdriverio/async",
