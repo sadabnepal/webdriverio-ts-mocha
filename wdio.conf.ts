@@ -1,6 +1,7 @@
+import { Options } from "@wdio/types";
 import { chromeCapabilities } from "./src/config/capabilities";
 
-export const config: WebdriverIO.Config = {
+export const config: Options.Testrunner = {
     // ==================
     // Specify Test Files
     // ==================

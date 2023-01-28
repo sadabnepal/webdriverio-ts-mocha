@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES2019",
-    "module": "commonJs",
+    "target": "ESNext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "baseUrl": ".",
     "esModuleInterop": true,
     "types": [
       "node",
-      "webdriverio/async",
+      "@wdio/globals/types",
       "@wdio/mocha-framework",
       "@wdio/selenium-standalone-service",
       "expect-webdriverio"
