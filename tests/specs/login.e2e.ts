@@ -1,7 +1,7 @@
-import LoginPage from '@Pages/login.page';
-import SecurePage from '@Pages/secure.page';
-import data from "@Resources/logindata.json";
-import LoginConstants from '@Static/loginConstants';
+import LoginPage from '../pages/login.page';
+import SecurePage from '../pages/secure.page';
+import data from "../resources/logindata.json";
+import LoginConstants from '../static/loginConstants';
 
 describe('Login application', () => {
 

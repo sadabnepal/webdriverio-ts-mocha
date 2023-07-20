@@ -1,16 +1,29 @@
+import type { Options } from '@wdio/types';
 import { chromeCapabilities } from "./capabilities";
 
-export const config: WebdriverIO.Config = {
+export const config: Options.Testrunner = {
+    // ====================
+    // Runner Configuration
+    // ====================
+    // WebdriverIO supports running e2e tests as well as unit and component tests.
+    runner: 'local',
+    autoCompileOpts: {
+        autoCompile: true,
+        tsNodeOpts: {
+            project: './tsconfig.json',
+            transpileOnly: true
+        }
+    },
     // ==================
     // Specify Test Files
     // ==================
     specs: [
-        './src/specs/*.ts'
+        '../specs/login.e2e.ts'
     ],
     exclude: [],
 
     suites: {
-        smoke: ['./src/specs/**/login.e2e.ts']
+        smoke: ['../specs/**/login.e2e.ts']
     },
     // ============
     // Capabilities
@@ -27,7 +40,7 @@ export const config: WebdriverIO.Config = {
     waitforTimeout: 5000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
-    services: ['selenium-standalone'],
+    services: ['chromedriver'],
     framework: 'mocha',
     specFileRetries: 0,
     specFileRetriesDelay: 0,
@@ -41,7 +54,6 @@ export const config: WebdriverIO.Config = {
         }]
     ],
     mochaOpts: {
-        compilers: ['tsconfig-paths/register'],
         ui: 'bdd',
         timeout: 60000,
         mochawesomeOpts: {
