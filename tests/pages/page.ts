@@ -7,14 +7,6 @@ export default class Page {
         return browser.url(path);
     }
 
-    protected getElement(element: string) {
-        return $(element);
-    }
-
-    protected getElements(element: any) {
-        return $$(element);
-    }
-
     protected async clickElement(element: WebdriverIOElement, waitTime?: number) {
         if (waitTime) await element.waitForClickable({ timeout: waitTime })
         await element.click();

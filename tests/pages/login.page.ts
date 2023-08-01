@@ -2,9 +2,9 @@ import Page from './page';
 
 class LoginPage extends Page {
 
-    get inputUsername() { return this.getElement('#username') }
-    get inputPassword() { return this.getElement('#password') }
-    get btnSubmit() { return this.getElement("button[type='submit']") }
+    get inputUsername() { return $('#username') }
+    get inputPassword() { return $('#password') }
+    get btnSubmit() { return $("button[type='submit']") }
 
     async openLoginPage() {
         await super.open('https://the-internet.herokuapp.com/login');

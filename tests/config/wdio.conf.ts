@@ -40,26 +40,20 @@ export const config: Options.Testrunner = {
     waitforTimeout: 5000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
-    services: ['chromedriver'],
+    // services: ['chromedriver'],
     framework: 'mocha',
     specFileRetries: 0,
     specFileRetriesDelay: 0,
     specFileRetriesDeferred: false,
     reporters: ['spec',
-        ['mochawesome', {
-            outputDir: 'reports/json/',
-            outputFileFormat: (opts: any) => {
-                return `results-${opts.cid}.${opts.capabilities.browserName}.json`
-            }
+        ['allure', {
+            outputDir: 'allure-results',
+            disableWebdriverStepsReporting: false
         }]
     ],
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000,
-        mochawesomeOpts: {
-            includeScreenshots: true,
-            screenshotUseRelativePath: true
-        },
+        timeout: 60000
     },
 
     //
@@ -186,10 +180,8 @@ export const config: Options.Testrunner = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    onComplete: function (exitCode, config, capabilities, results) {
-        const mergeResults = require('wdio-mochawesome-reporter/mergeResults')
-        mergeResults('./reports/json', "results-*");
-    },
+    // onComplete: function (exitCode, config, capabilities, results) {
+    // },
     /**
     * Gets executed when a refresh happens.
     * @param {String} oldSessionId session ID of the old session
