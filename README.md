@@ -57,7 +57,9 @@ npm run cleanup
 ### Folder Structure
 
 ```ini
-├───src
+├───.github
+├───.vscode
+├───tests
 |    ├───config
 |    ├───pages
 |    ├───specs
