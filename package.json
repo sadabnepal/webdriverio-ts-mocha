@@ -8,6 +8,7 @@
     "cross-browser": "wdio tests/config/wdio.conf.cross-browser.ts",
     "smoke": "wdio tests/config/wdio.conf.ts --suite smoke",
     "report": "allure generate allure-results --clean && allure open",
+    "report:ci": "allure generate --clean allure-results",
     "cleanup": "rm -rf allure-results"
   },
   "author": "MD SADAB SAQIB",
