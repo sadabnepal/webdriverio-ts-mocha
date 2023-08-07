@@ -34,13 +34,13 @@ export const config: Options.Testrunner = {
     // Test Configurations
     // ===================
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'error',
+    logLevel: 'trace',
     bail: 0,
     baseUrl: 'https://localhost',
     waitforTimeout: 5000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
-    // services: ['chromedriver'],
+    // services: [],
     framework: 'mocha',
     specFileRetries: 0,
     specFileRetriesDelay: 0,

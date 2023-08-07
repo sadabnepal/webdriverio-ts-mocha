@@ -10,6 +10,7 @@ export const chromeCapabilities = [
     {
         maxInstances: 2,
         browserName: 'chrome',
+        browserVersion: 'stable',
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
             args: browserArgs
@@ -22,6 +23,7 @@ export const multipleBrowserCapabilities = [
     {
         maxInstances: 2,
         browserName: 'MicrosoftEdge',
+        browserVersion: 'stable',
         acceptInsecureCerts: true,
         'ms:edgeOptions': {
             args: browserArgs
