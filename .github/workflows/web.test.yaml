@@ -18,7 +18,7 @@ jobs:
         - name: Install Dependencies
           run: npm install
         - name: Run Test
-          run: npm run test-remote
+          run: npm run cross-browser
         - name: Generate Allure Repor
           run: npm run report:ci
           continue-on-error: true
