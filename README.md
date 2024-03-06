@@ -12,8 +12,8 @@ This is a sample project that uses WebdriverIO and TypeScript. It includes examp
 Clone Repository
 
 ```bash
-1. git clone https://github.com/sadabnepal/WebdriverIOTypeScriptMocha.git
-2. Navigate to WebdriverIOTypeScriptMocha
+1. git clone https://github.com/sadabnepal/webdriverio-ts-mocha.git
+2. Navigate to webdriverio-ts-mocha
 ```
 
 Install the dependencies:
