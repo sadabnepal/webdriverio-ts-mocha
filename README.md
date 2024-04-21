@@ -4,7 +4,7 @@ This is a sample project that uses WebdriverIO and TypeScript. It includes examp
 
 ### Requirements
 
-[![NodeJs](https://img.shields.io/badge/-NodeJS%20v16%20OR%20later-%23339933?logo=npm)](https://nodejs.org/en/download/)
+[![NodeJs](https://img.shields.io/badge/-NodeJS%20v%20>=%2016-white?logo=node.js)](https://nodejs.org/en/download/)
 [![VSCode](https://img.shields.io/badge/-Visual%20Studio%20Code-%233178C6?logo=visual-studio-code)](https://code.visualstudio.com/download)
 
 ### Getting Started
@@ -12,21 +12,31 @@ This is a sample project that uses WebdriverIO and TypeScript. It includes examp
 Clone Repository
 
 ```bash
-1. git clone https://github.com/sadabnepal/webdriverio-ts-mocha.git
-2. Navigate to webdriverio-ts-mocha
+git clone https://github.com/sadabnepal/webdriverio-ts-mocha.git
+cd webdriverio-ts-mocha
 ```
 
-Install the dependencies:
+Install packages:
 
 ```bash
-npm install --legacy-peer-deps
+npm install
 ```
 
 Run tests:
 
 ```bash
-npm test                [ UI test in chrome ]
-npm run cross-browser   [ UI test in chrome and edge ]
+npm run test            [ test in chrome ]
+npm run test:edge       [ test in edge ]
+npm run cross-browser   [ test in chrome and edge ]
+npm run test:docker     [ test inside container ]
+```
+
+Docker:
+
+```bash
+docker compose -f docker-compose.yml up
+open http://localhost:4444/ to check if server is running
+docker compose -f docker-compose-arm.yml up  [ for m1 chip mac user]
 ```
 
 Generate report:
@@ -35,24 +45,17 @@ Generate report:
 npm run report
 ```
 
-Report Paths:
-
-```sh
-reports/mocha.html
-```
-
 Cleanup Report folder
 
-```sh
+```bash
 npm run cleanup
 ```
 
 ### Key Features
-
-    - Page Object Design pattern
-    - Custome types for web elements
-    - Parallel execution and Cross browser testing
-    - Report integration with screenshot on failure
+- Custom types for web elements
+- Parallel execution and Cross browser testing
+- Docker for run test again/using containerization
+- Github actions CI/CD integration
 
 ### Folder Structure
 
