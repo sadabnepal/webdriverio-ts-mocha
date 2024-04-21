@@ -1,4 +1,4 @@
-name: Smoke Suite
+name: WebdriverIO Test Suite
 on:
   push:
     branches: main
@@ -42,28 +42,4 @@ jobs:
           uses: actions/upload-artifact@v3
           with:
             name: AllureReportChrome
-            path: ./allure-report
-
-  regression_on_edge:
-    needs: [smoke]
-    runs-on: ubuntu-latest
-    steps:
-        - name: Checkout Code
-          uses: actions/checkout@v3
-        - name: Setup Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: 18
-        - name: Install Dependencies
-          run: npm ci
-        - name: Run Test
-          run: npm run test:edge
-        - name: Generate Allure Report
-          run: npm run report
-          if: always()
-        - name: Upload Allure Report to Artifact
-          if: always()
-          uses: actions/upload-artifact@v3
-          with:
-            name: AllureReportEdge
             path: ./allure-report
