@@ -3,12 +3,23 @@
     "target": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "types": [
       "node",
       "@wdio/globals/types",
       "@wdio/mocha-framework",
       "expect-webdriverio"
     ]
-  }
+  },
+  "include": [
+    "./tests/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "allure-results",
+    "allure-report"
+  ]
 }

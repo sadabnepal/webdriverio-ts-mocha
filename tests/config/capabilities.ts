@@ -4,7 +4,7 @@ const browserArgs = [
     '--headless',
     '--disable-gpu',
     '--window-size=1440,735'
-]
+];
 
 export const chromeCapabilities = [
     {
@@ -16,10 +16,9 @@ export const chromeCapabilities = [
             args: browserArgs
         }
     }
-]
+];
 
-export const multipleBrowserCapabilities = [
-    ...chromeCapabilities,
+export const msEdgeCapabilities = [
     {
         maxInstances: 2,
         browserName: 'MicrosoftEdge',
@@ -28,5 +27,10 @@ export const multipleBrowserCapabilities = [
         'ms:edgeOptions': {
             args: browserArgs
         }
-    },
-]
+    }
+];
+
+export const multipleBrowserCapabilities = [
+    ...chromeCapabilities,
+    ...msEdgeCapabilities
+];

@@ -4,7 +4,12 @@ import { config as mainConfig } from './wdio.conf'
 
 export const config: Options.Testrunner = {
     ...mainConfig,
+    hostname: 'localhost',
+    port: 4444,
+    path: '/',
+    maxInstances: 5,
     capabilities: multipleBrowserCapabilities,
+    services: ['docker'],
     reporters: [
         'spec',
         [

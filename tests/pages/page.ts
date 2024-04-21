@@ -1,10 +1,10 @@
-import { WebdriverIOElement, WebdriverIOElements } from "../types/webelements";
+import { type WebdriverIOElement, type WebdriverIOElements } from '../types/webelements';
 
 export default class Page {
 
     protected async open(path: string) {
         await browser.maximizeWindow();
-        return browser.url(path);
+        return await browser.url(path);
     }
 
     protected async clickElement(element: WebdriverIOElement, waitTime?: number) {
