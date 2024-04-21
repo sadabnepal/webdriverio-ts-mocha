@@ -1,0 +1,27 @@
+# To execute this docker compose yml file use `docker compose -f docker-compose-arm.yml up`
+# Add the `-d` flag at the end for detached execution
+version: "3"
+
+services:
+
+  seleniarm-hub:
+    image: seleniarm/hub:latest
+    container_name: selenium-hub
+    restart: always
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444"
+
+  chrome:
+    image: seleniarm/node-chromium:latest
+    shm_size: 2gb
+    depends_on:
+      - seleniarm-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_SESSION_REQUEST_TIMEOUT=5
+      - SE_NODE_MAX_SESSIONS=4
+      - VNC_NO_PASSWORD=1
