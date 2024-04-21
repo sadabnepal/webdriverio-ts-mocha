@@ -8,6 +8,7 @@
     "test:edge": "wdio tests/config/wdio.conf.edge.ts",
     "cross:browser": "wdio tests/config/wdio.conf.cross-browser.ts",
     "smoke": "wdio tests/config/wdio.conf.ts --suite smoke --mochaOpts.grep TC_001",
+    "test:rp": "wdio tests/config/wdio.reportPortal.ts",
     "report": "allure generate --single-file allure-results --clean",
     "cleanup": "rm -rf allure-results",
     "test:docker": "wdio run ./tests/config/wdio.conf.docker.ts"
@@ -15,12 +16,14 @@
   "author": "MD SADAB SAQIB",
   "license": "ISC",
   "devDependencies": {
+    "@reportportal/agent-js-webdriverio": "^5.1.0",
     "@wdio/allure-reporter": "^8.36.1",
     "@wdio/cli": "^8.36.1",
     "@wdio/local-runner": "^8.36.1",
     "@wdio/mocha-framework": "^8.36.1",
     "@wdio/spec-reporter": "^8.36.1",
     "allure-commandline": "^2.28.0",
+    "dotenv": "^16.4.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
     "wdio-docker-service": "^3.2.1"
