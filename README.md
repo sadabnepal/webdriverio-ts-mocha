@@ -27,8 +27,9 @@ Run tests:
 ```bash
 npm run test            [ test in chrome ]
 npm run test:edge       [ test in edge ]
-npm run cross-browser   [ test in chrome and edge ]
-npm run test:docker     [ test inside container ]
+npm run cross:browser   [ test in chrome and edge ]
+npm run test:docker     [ test in docker container ]
+npm run test:rp         [ test for report portal ]
 ```
 
 Docker Run:
@@ -42,10 +43,17 @@ docker compose -f tests/docker/docker-compose-arm.yml down
 ```
 open http://localhost:4444/ to check if server is running
 
-Generate report:
-
+Generate report with historical data:
 ```bash
+npm run move
 npm run report
+```
+### Sample Report
+![allure_report](./images/allureHome.png)
+
+Generate offline html report:
+```bash
+npm run report:html
 ```
 
 Cleanup Report folder
@@ -72,9 +80,10 @@ npm run cleanup
 ### Key Features
 - Custom types for web elements
 - Parallel execution and Cross browser testing
-- Docker for run test again/using containerization
+- Docker for testing against/using containerization
 - Github actions CI/CD integration
 - Report portal integration
+- dotenv to store secrets locally 
 
 ### Folder Structure
 
@@ -92,7 +101,3 @@ npm run cleanup
 ├───README.md
 └───tsconfig.json
 ```
-
-### Sample Report
-
-![image](https://user-images.githubusercontent.com/65847528/143480443-cee233a4-6296-4773-8b54-c593d7dfd022.png)

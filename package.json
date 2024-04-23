@@ -8,8 +8,10 @@
     "test:edge": "wdio tests/config/wdio.conf.edge.ts",
     "cross:browser": "wdio tests/config/wdio.conf.cross-browser.ts",
     "smoke": "wdio tests/config/wdio.conf.ts --suite smoke --mochaOpts.grep TC_001",
-    "test:rp": "wdio tests/config/wdio.reportPortal.ts",
-    "report": "allure generate --single-file allure-results --clean",
+    "test:rp": "wdio tests/config/wdio.conf.rp.ts",
+    "move": "cp -r ./allure-report/history ./allure-results",
+    "report": "allure generate allure-results --clean && allure open",
+    "report:html": "allure generate --single-file allure-results --clean",
     "cleanup": "rm -rf allure-results",
     "test:docker": "wdio run ./tests/config/wdio.conf.docker.ts"
   },

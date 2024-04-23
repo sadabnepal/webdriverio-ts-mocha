@@ -36,7 +36,7 @@ jobs:
           run: npm run test
         - name: Generate Allure Report
           if: always()
-          run: npm run report
+          run: npm run report:html
         - name: Upload Allure Report to Artifact
           if: always()
           uses: actions/upload-artifact@v3
