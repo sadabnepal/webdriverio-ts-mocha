@@ -1,5 +1,6 @@
 import type { Options } from '@wdio/types';
 import { chromeCapabilities } from './capabilities';
+import { reportOptions } from './reportOptions';
 
 export const config: Options.Testrunner = {
     // ====================
@@ -34,7 +35,7 @@ export const config: Options.Testrunner = {
     // Test Configurations
     // ===================
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'warn',
+    logLevel: 'info',
     bail: 0,
     baseUrl: 'https://localhost',
     waitforTimeout: 5000,
@@ -45,16 +46,7 @@ export const config: Options.Testrunner = {
     specFileRetries: 0,
     specFileRetriesDelay: 0,
     specFileRetriesDeferred: false,
-    reporters: ['spec',
-        ['allure', {
-            outputDir: 'allure-results',
-            disableWebdriverStepsReporting: true,
-            disableMochaHooks: true,
-            reportedEnvironmentVars: {
-                browserCapabilities: JSON.stringify(chromeCapabilities[0], null, 4)
-            }
-        }]
-    ],
+    reporters: reportOptions(chromeCapabilities),
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000

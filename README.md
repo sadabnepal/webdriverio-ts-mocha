@@ -1,6 +1,6 @@
 # WebdriverIO TypeScript Mocha Framework
 
-This is a sample project that uses WebdriverIO and TypeScript. It includes examples of the PageObject pattern and some practical examples for using WebdriverIO for cross browser and parallel testing.
+This is a sample project that uses WebdriverIO and TypeScript. It includes examples of the PageObject pattern and some practical examples for using WebdriverIO for cross browser and parallel run. testing inside container, report portal integration.
 
 ### Requirements
 
@@ -29,7 +29,6 @@ npm run test            [ test in chrome ]
 npm run test:edge       [ test in edge ]
 npm run cross:browser   [ test in chrome and edge ]
 npm run test:docker     [ test in docker container ]
-npm run test:rp         [ test for report portal ]
 ```
 
 Docker Run:
@@ -74,6 +73,7 @@ npm run cleanup
     - Paste your API key into `.env` file as `REPORT_PORTAL_KEY=<your api key>`
 - Enter `REPORT_PORTAL_PROJECT=<project_assignment>` into `.env`. Value can be found on `PROJECT ASSIGNMENT` tab of user profile
 - Other details are updated in `tests/config/wdio.reportPortal.ts` file
+- add `REPORT_PORTAL_SWITCH=ON` to push results to report portal
 
 ![docker_run](./images/reportPortal.png)
 
@@ -90,12 +90,19 @@ npm run cleanup
 ```ini
 ├───.github
 ├───.vscode
+├───.images
 ├───tests
 |    ├───config
+|    ├───docker
 |    ├───pages
+|    ├───resources
 |    ├───specs
 |    ├───static
 |    └───types
+├───.env
+├───.env.example
+├───.gitignore
+├───docker-compose.yml
 ├───package-lock.json
 ├───package.json
 ├───README.md
