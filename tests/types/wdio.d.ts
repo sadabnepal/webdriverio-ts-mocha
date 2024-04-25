@@ -1,5 +1,5 @@
+import type { ReporterEntry } from '@wdio/types/build/Reporters.js';
 import type { ChainablePromiseArray, ChainablePromiseElement, ElementArray } from 'webdriverio';
-import type { ReporterEntry } from '../../node_modules/@wdio/types/build/Reporters.js';
 
 export type WebdriverIOElement = ChainablePromiseElement<WebdriverIO.Element>;
 export type WebdriverIOElements = ChainablePromiseArray<ElementArray>;

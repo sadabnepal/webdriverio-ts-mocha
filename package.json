@@ -12,7 +12,11 @@
     "report": "allure generate allure-results --clean && allure open",
     "report:html": "allure generate --single-file allure-results --clean",
     "cleanup": "rm -rf allure-results",
-    "test:docker": "wdio run ./tests/config/wdio.conf.docker.ts"
+    "docker:start": "docker compose -f tests/docker/docker-compose.yml up -d",
+    "docker:start:arm": "docker compose -f tests/docker/docker-compose-arm.yml up -d",
+    "test:docker": "wdio run ./tests/config/wdio.conf.docker.ts",
+    "docker:stop": "docker compose -f tests/docker/docker-compose.yml down",
+    "docker:stop:arm": "docker compose -f tests/docker/docker-compose-arm.yml down"
   },
   "author": "MD SADAB SAQIB",
   "license": "ISC",

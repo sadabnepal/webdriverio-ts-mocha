@@ -1,4 +1,4 @@
-import { type WebdriverIOElement, type WebdriverIOElements } from '../types/webelements';
+import type { WebdriverIOElement, WebdriverIOElements } from '../types/wdio';
 
 export default class Page {
 

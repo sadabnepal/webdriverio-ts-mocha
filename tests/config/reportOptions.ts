@@ -1,5 +1,5 @@
 import { config } from 'dotenv';
-import { ReporterOptions } from '../types/webelements';
+import type { ReporterOptions } from '../types/wdio';
 const { Reporter } = require('@reportportal/agent-js-webdriverio');
 config();
 

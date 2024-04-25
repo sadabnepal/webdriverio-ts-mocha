@@ -28,17 +28,18 @@ Run tests:
 npm run test            [ test in chrome ]
 npm run test:edge       [ test in edge ]
 npm run cross:browser   [ test in chrome and edge ]
-npm run test:docker     [ test in docker container ]
 ```
 
 Docker Run:
 
 ```bash
-docker compose -f tests/docker/docker-compose.yml up -d
-docker compose -f tests/docker/docker-compose.yml down
+npm run docker:start    [ start the docker container ]
+npm run docker:stop     [ stop the docker container ]
 
-docker compose -f tests/docker/docker-compose-arm.yml up -d  [m1 chip mac user]
-docker compose -f tests/docker/docker-compose-arm.yml down
+npm run test:docker     [ test in docker container ]
+
+npm run docker:start:arm    [ start the docker container for mac m1 chip ]
+npm run docker:stop:arm     [ stop the docker container for mac m1 chip ]
 ```
 open http://localhost:4444/ to check if server is running
 
