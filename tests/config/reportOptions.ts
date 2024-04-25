@@ -1,9 +1,10 @@
 import { config } from 'dotenv';
-import type { ReporterOptions } from '../types/wdio';
+import type { ReporterEntries } from '../types/wdio';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { Reporter } = require('@reportportal/agent-js-webdriverio');
 config();
 
-const allureOptions = (caps: any) => {
+const allureOptions = (caps: WebdriverIO.ReporterOption) => {
     return {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,
@@ -34,17 +35,17 @@ const reportPortalOptions = {
     ]
 };
 
-export const reportOptions = (caps: any): ReporterOptions => {
-    if (process.env.REPORT_PORTAL_SWITCH === "ON") {
+export const reportOptions = (caps: WebdriverIO.ReporterOption): ReporterEntries => {
+    if (process.env.REPORT_PORTAL_SWITCH === 'ON') {
         return [
             'spec',
             ['allure', allureOptions(caps)],
             [Reporter, reportPortalOptions]
-        ]
+        ];
     } else {
         return [
             'spec',
             ['allure', allureOptions(caps)],
-        ]
+        ];
     }
 };

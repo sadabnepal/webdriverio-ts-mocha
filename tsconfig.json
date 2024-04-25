@@ -15,7 +15,8 @@
     ]
   },
   "include": [
-    "./tests/**/*"
+    "./tests/**/*",
+    ".eslintrc.js"
   ],
   "exclude": [
     "node_modules",

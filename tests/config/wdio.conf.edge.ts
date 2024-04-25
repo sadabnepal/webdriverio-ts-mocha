@@ -7,4 +7,4 @@ export const config: Options.Testrunner = {
     ...mainConfig,
     capabilities: msEdgeCapabilities,
     reporters: reportOptions(msEdgeCapabilities)
-}
+};

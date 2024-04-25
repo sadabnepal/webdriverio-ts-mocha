@@ -3,5 +3,5 @@ import type { ChainablePromiseArray, ChainablePromiseElement, ElementArray } fro
 
 export type WebdriverIOElement = ChainablePromiseElement<WebdriverIO.Element>;
 export type WebdriverIOElements = ChainablePromiseArray<ElementArray>;
-export type ReporterOptions = ReporterEntry[];
+export type ReporterEntries = ReporterEntry[];
 

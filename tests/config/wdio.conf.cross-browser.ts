@@ -7,4 +7,4 @@ export const config: Options.Testrunner = {
     ...mainConfig,
     capabilities: multipleBrowserCapabilities,
     reporters: reportOptions(multipleBrowserCapabilities)
-}
+};

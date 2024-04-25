@@ -12,4 +12,4 @@ export const config: Options.Testrunner = {
     capabilities: multipleBrowserCapabilities,
     services: ['docker'],
     reporters: reportOptions(multipleBrowserCapabilities)
-}
+};
