@@ -18,7 +18,8 @@
     "docker:stop": "docker compose -f tests/docker/docker-compose.yml down",
     "docker:stop:arm": "docker compose -f tests/docker/docker-compose-arm.yml down",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky"
   },
   "author": "MD SADAB SAQIB",
   "license": "ISC",
@@ -35,6 +36,7 @@
     "dotenv": "^16.4.5",
     "eslint": "^8.57.0",
     "eslint-plugin-wdio": "^8.24.12",
+    "husky": "^9.0.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
     "wdio-docker-service": "^3.2.1"

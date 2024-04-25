@@ -84,12 +84,15 @@ npm run cleanup
 - Docker for testing against/using containerization
 - Github actions CI/CD integration
 - Report portal integration
-- dotenv to store secrets locally 
+- dotenv to store secrets locally
+- eslint linting tools integrated
+- husky git hooks for pre-commit checks (eslint)
 
 ### Folder Structure
 
 ```ini
 ├───.github
+├───.husky
 ├───.vscode
 ├───.images
 ├───tests
@@ -102,6 +105,7 @@ npm run cleanup
 |    └───types
 ├───.env
 ├───.env.example
+├───.eslintrc.js
 ├───.gitignore
 ├───docker-compose.yml
 ├───package-lock.json
