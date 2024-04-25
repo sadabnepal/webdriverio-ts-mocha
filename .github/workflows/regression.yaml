@@ -1,8 +1,6 @@
-name: WebdriverIO Test Suite
+name: WebdriverIO Regression Suite
 on:
   push:
-    branches: main
-  pull_request:
     branches: main
 
 jobs:
