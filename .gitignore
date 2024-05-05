@@ -3,3 +3,5 @@ allure-report
 allure-results
 .env
 .DS_Store
+logs/
+local.log

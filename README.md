@@ -64,6 +64,14 @@ npm run cleanup
 ### Github Action Workflow
 ![docker_run](./images/githubRun.png)
 
+### BrowserStack Integration
+- Follow [Browser Stack Integration Getting Started](https://automate.browserstack.com/dashboard/v2/quick-start/get-started) document
+- Note down `BROWSERSTACK_USERNAME` and `BROWSERSTACK_ACCESS_KEY` from profile section
+- Paste value in .env for above copied value. Refer `.env.example` file
+- Run 'npm run test:bs` command to execute test in browser stack
+
+![browser_stack](./images/browserStackDashboard.png)
+
 ### Report Portal Integration
 - Setup: follow https://reportportal.io/installation
 - Login: Open http://localhost:8080/ and login with time user `superadmin` and password `erebus`
@@ -84,6 +92,7 @@ npm run cleanup
 - Docker for testing against/using containerization
 - Github actions CI/CD integration
 - Report portal integration
+- BrowserStack Integration
 - dotenv to store secrets locally
 - eslint linting tools integrated
 - husky git hooks for pre-commit checks (eslint)
@@ -94,7 +103,7 @@ npm run cleanup
 ├───.github
 ├───.husky
 ├───.vscode
-├───.images
+├───images
 ├───tests
 |    ├───config
 |    ├───docker

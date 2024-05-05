@@ -19,7 +19,7 @@ export const config: Options.Testrunner = {
     // Specify Test Files
     // ==================
     specs: [
-        '../specs/login.e2e.ts'
+        '../specs/**/*.ts'
     ],
     exclude: [],
 
