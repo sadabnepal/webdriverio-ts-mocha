@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "wdio tests/config/wdio.conf.ts",
+    "test:bs": "wdio tests/config/wdio.conf.bs.ts",
     "test:edge": "wdio tests/config/wdio.conf.edge.ts",
     "cross:browser": "wdio tests/config/wdio.conf.cross-browser.ts",
     "smoke": "wdio tests/config/wdio.conf.ts --suite smoke --mochaOpts.grep TC_001",
@@ -28,6 +29,7 @@
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
     "@wdio/allure-reporter": "^8.36.1",
+    "@wdio/browserstack-service": "^8.36.1",
     "@wdio/cli": "^8.36.1",
     "@wdio/local-runner": "^8.36.1",
     "@wdio/mocha-framework": "^8.36.1",
