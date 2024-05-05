@@ -67,8 +67,8 @@ npm run cleanup
 ### BrowserStack Integration
 - Follow [Browser Stack Integration Getting Started](https://automate.browserstack.com/dashboard/v2/quick-start/get-started) document
 - Note down `BROWSERSTACK_USERNAME` and `BROWSERSTACK_ACCESS_KEY` from profile section
-- Paste value in .env for above copied value. Refer `.env.example` file
-- Run 'npm run test:bs` command to execute test in browser stack
+- Paste value in .env for above copied content. Refer `.env.example` file
+- Run `npm run test:bs` command to execute test in browser stack
 
 ![browser_stack](./images/browserStackDashboard.png)
 
