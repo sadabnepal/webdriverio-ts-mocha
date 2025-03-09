@@ -10,6 +10,6 @@ describe('login fail', () => {
 
     it.skip('should fail test intentionally', async () => {
         await loginPage.performLogin(data.valid.user, data.valid.password);
-        await expect(securePage.flashAlert).not.toExist();
+        await expect(securePage.flashAlert).not.toBeDisplayed();
     });
 });

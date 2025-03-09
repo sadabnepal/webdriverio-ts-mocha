@@ -1,29 +1,34 @@
 const browserArgs = [
     '--no-sandbox',
-    '--disable-infobars',
     '--headless',
     '--disable-gpu',
+    '--enable-automation',
     '--window-size=1440,735'
 ];
 
 export const chromeCapabilities = [
     {
-        maxInstances: 2,
         browserName: 'chrome',
         browserVersion: 'stable',
         acceptInsecureCerts: true,
+        'wdio:maxInstances': 2,
         'goog:chromeOptions': {
-            args: browserArgs
+            args: browserArgs,
+            prefs: {
+                'profile': {
+                    'password_manager_leak_detection': false
+                }
+            }
         }
     }
 ];
 
 export const msEdgeCapabilities = [
     {
-        maxInstances: 2,
         browserName: 'MicrosoftEdge',
         browserVersion: 'stable',
         acceptInsecureCerts: true,
+        'wdio:maxInstances': 2,
         'ms:edgeOptions': {
             args: browserArgs
         }

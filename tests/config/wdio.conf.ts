@@ -1,20 +1,13 @@
-import type { Options } from '@wdio/types';
 import { chromeCapabilities } from './capabilities';
 import { reportOptions } from './reportOptions';
 
-export const config: Options.Testrunner = {
+export const config: WebdriverIO.Config = {
     // ====================
     // Runner Configuration
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
-    autoCompileOpts: {
-        autoCompile: true,
-        tsNodeOpts: {
-            project: './tsconfig.json',
-            transpileOnly: true
-        }
-    },
+    tsConfigPath: './tsconfig.json',
     // ==================
     // Specify Test Files
     // ==================
@@ -129,7 +122,7 @@ export const config: Options.Testrunner = {
     /**
       * Function to be executed after a test (in Mocha/Jasmine).
       */
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     afterTest: async function (test, context, { error, result, duration, passed, retries }) {
         if (!passed) {
             await browser.takeScreenshot();
