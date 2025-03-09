@@ -1,9 +1,8 @@
-import type { Options } from '@wdio/types';
 import { config as dotEnvConfig } from 'dotenv';
 import { config as mainConfig } from './wdio.conf';
 dotEnvConfig();
 
-export const config: Options.Testrunner = {
+export const config: WebdriverIO.Config = {
     ...mainConfig,
     user: process.env.BROWSERSTACK_USERNAME,
     key: process.env.BROWSERSTACK_ACCESS_KEY,
@@ -14,8 +13,8 @@ export const config: Options.Testrunner = {
             {
                 testObservability: true,
                 testObservabilityOptions: {
-                    'projectName': 'WebdriverIO TypeScript Mocha Framework',
-                    'buildName': 'Nightly regression'
+                    projectName: 'WebdriverIO TypeScript Mocha Framework',
+                    buildName: 'Nightly regression'
                 },
                 browserstackLocal: true,
                 opts: { forceLocal: false }

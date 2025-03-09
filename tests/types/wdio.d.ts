@@ -1,7 +1,6 @@
+import type { RequestedStandaloneCapabilities } from '@wdio/types/build/Capabilities';
 import type { ReporterEntry } from '@wdio/types/build/Reporters.js';
-import type { ChainablePromiseArray, ChainablePromiseElement, ElementArray } from 'webdriverio';
 
-export type WebdriverIOElement = ChainablePromiseElement<WebdriverIO.Element>;
-export type WebdriverIOElements = ChainablePromiseArray<ElementArray>;
 export type ReporterEntries = ReporterEntry[];
+export type StandaloneCapabilities = RequestedStandaloneCapabilities[];
 

@@ -11,9 +11,9 @@ class LoginPage extends Page {
     }
 
     async performLogin(username: string, password: string) {
-        await this.setData(this.inputUsername, username);
-        await this.setData(this.inputPassword, password);
-        await this.clickElement(this.buttonSubmit);
+        await this.inputUsername.setValue(username);
+        await this.inputPassword.setValue(password);
+        await this.buttonSubmit.click();
     }
 
 }
