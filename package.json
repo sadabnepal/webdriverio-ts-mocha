@@ -26,6 +26,7 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.22.0",
+    "@faker-js/faker": "^9.6.0",
     "@reportportal/agent-js-webdriverio": "^5.2.0",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@wdio/allure-reporter": "^9.10.1",
