@@ -38,6 +38,7 @@ npm run docker:stop     [ stop the docker container ]
 
 npm run test:docker     [ test in docker container ]
 
+# TODO: arm yml not found
 npm run docker:start:arm    [ start the docker container for mac m1 chip ]
 npm run docker:stop:arm     [ stop the docker container for mac m1 chip ]
 ```

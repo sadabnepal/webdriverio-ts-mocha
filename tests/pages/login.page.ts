@@ -7,7 +7,7 @@ class LoginPage extends Page {
     get buttonSubmit() { return $("button[type='submit']") }
 
     async openLoginPage() {
-        await super.open('https://the-internet.herokuapp.com/login');
+        await super.open('/login');
     }
 
     async performLogin(username: string, password: string) {
