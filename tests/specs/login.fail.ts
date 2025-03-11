@@ -2,7 +2,7 @@ import loginPage from '../pages/login.page';
 import securePage from '../pages/secure.page';
 import data from '../resources/logindata.json';
 
-describe('form fields', () => {
+describe('login fail', () => {
 
     beforeEach(async () => {
         await loginPage.openLoginPage();
