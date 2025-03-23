@@ -18,7 +18,7 @@
     "test:docker": "wdio run ./tests/config/wdio.conf.docker.ts",
     "docker:stop": "docker compose -f tests/docker/docker-compose.yml down",
     "docker:stop:arm": "docker compose -f tests/docker/docker-compose-arm.yml down",
-    "lint": "eslint .",
+    "lint": "npx tsc --noEmit && eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "husky"
   },
