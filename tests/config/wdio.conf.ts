@@ -122,8 +122,7 @@ export const config: WebdriverIO.Config = {
     /**
       * Function to be executed after a test (in Mocha/Jasmine).
       */
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    afterTest: async function (test, context, { error, result, duration, passed, retries }) {
+    afterTest: async function (_test, _context, { passed }) {
         if (!passed) {
             await browser.takeScreenshot();
         }

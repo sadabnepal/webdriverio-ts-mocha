@@ -1,5 +1,5 @@
 import { config } from 'dotenv';
-import type { ReporterEntries, StandaloneCapabilities } from '../types/wdio';
+import type { ReporterEntries, StandaloneCapabilities } from '../types/webdriverio';
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-require-imports
 const { Reporter } = require('@reportportal/agent-js-webdriverio');
