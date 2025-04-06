@@ -1,4 +1,4 @@
-import { IAddress } from '../types/forms';
+import { IAddress, IGender, INames } from '../types/forms';
 
 class FormsPage {
 
@@ -7,7 +7,7 @@ class FormsPage {
         return await browser.url('https://letcode.in/forms');
     }
 
-    async enterNames(options: { firstName: string, lastName: string }) {
+    async enterNames(options: INames) {
         const { firstName, lastName } = options;
         await $('#firstname').setValue(firstName);
         await $('#lasttname').setValue(lastName);
@@ -38,7 +38,7 @@ class FormsPage {
         await $('#Date').setValue(date);
     }
 
-    async selectGender(gender: 'male' | 'female' | 'trans') {
+    async selectGender(gender: IGender) {
         await $(`//input[@name='gender' and @id='${gender}']`).click();
     }
 
